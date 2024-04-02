@@ -7,7 +7,6 @@ const userController = require("./controllers/user-controller");
 const postsController = require("./controllers/post-controller");
 const assetsController = require('./controllers/assets-controller')
 
-
 app.get("/about", assetsController.about)
 app.get("/footer", assetsController.footer)
 
