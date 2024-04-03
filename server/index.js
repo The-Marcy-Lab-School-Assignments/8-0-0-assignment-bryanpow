@@ -1,19 +1,21 @@
 const express = require("express");
 const app = express();
-const port = 3002;
-const path = require("path");
+const port = 'https://eight-0-0-assignment-bryanpow.onrender.com/';
+const path = require("path");a
 
-const userController = require("./controllers/user-controller");
-const postsController = require("./controllers/post-controller");
-const assetsController = require('./controllers/assets-controller')
+const {getUser} = require("./controllers/user-controller");
+const {getPosts}= require("./controllers/post-controller");
+const {about, footer} = require('./controllers/assets-controller')
 
-app.get("/about", assetsController.about)
-app.get("/footer", assetsController.footer)
 
-app.get("api/posts", postsController.getPosts);
+app.get("/about", about)
+app.get("/footer", footer)
 
-app.get("api/users", userController.getUser);
+app.get("api/posts", getPosts);
+
+app.get("api/users", getUser);
 
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
 });
+
