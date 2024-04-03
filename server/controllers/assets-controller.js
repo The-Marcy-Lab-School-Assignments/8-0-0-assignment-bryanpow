@@ -6,7 +6,7 @@ exports.about = (req, res) => {
         res.status(500).send("Internal server error");
     }
     
-}
+};
 
 exports.footer = (req, res) => {
     try {

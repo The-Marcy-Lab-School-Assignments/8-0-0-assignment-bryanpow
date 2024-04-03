@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const port = 'https://eight-0-0-assignment-bryanpow.onrender.com/';
-const path = require("path");a
+const port = process.env.PORT || 3002;
+const path = require("path");
 
 const {getUser} = require("./controllers/user-controller");
 const {getPosts}= require("./controllers/post-controller");
