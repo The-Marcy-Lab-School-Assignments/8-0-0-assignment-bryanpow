@@ -11,7 +11,7 @@ exports.about = (req, res) => {
 
 exports.footer = (req, res) => {
     try {
-        res.sendFile(path.join(__dirname, "assets", "footer.html"));
+        res.sendFile(path.join(__dirname, "../assets", "footer.html"));
     } catch (err) {
         console.error("Error sending about page:", err);
         res.status(500).send("Internal server error");
