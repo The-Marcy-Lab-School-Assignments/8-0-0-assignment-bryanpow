@@ -1,3 +1,4 @@
+path = require("path");
 exports.about = (req, res) => {
     try {
         res.sendFile(path.join(__dirname, "assets", "about.html"));
